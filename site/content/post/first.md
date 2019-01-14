@@ -2,7 +2,7 @@
 title: 'Swymm: an interactive, crowdsourced timeline of all history.'
 date: 2016-12-22T20:04:40.407Z
 ---
-Swymm is an interactive, crowdsourced timeline of all history. Swymm’s mission is to provide an open platform for cataloging and visualizing time-based data of all kinds, and thereby enable anyone to discover, learn from, and contribute to humanity’s understanding of history.
+Swymm’s mission is to provide an open platform for cataloging and visualizing time-based data of all kinds, and thereby enable anyone to discover, learn from, and contribute to humanity’s understanding of history.
 
 Read more...
 
