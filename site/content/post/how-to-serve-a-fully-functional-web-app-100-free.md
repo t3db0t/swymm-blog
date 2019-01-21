@@ -32,10 +32,10 @@ Screw the backend. Seriously, what do you really need it to do? If your UI is co
 
 If you've already been doing this, it sounds obvious. It wasn't completely obvious to me when I first considered it. But the devil's in the details:
 
-- Wait, who serves the database?
-- How do you connect to the database?
-- How do you authenticate safely?
-- How do you form your database queries?
+* Wait, who serves the database?
+* How do you connect to the database?
+* How do you authenticate safely?
+* How do you form your database queries?
 
 So let me cut to the chase with my particular solution, which I'm overall extremely happy with (with a few caveats).
 
@@ -46,6 +46,8 @@ So let me cut to the chase with my particular solution, which I'm overall extrem
 First things first: I had heard about [Netlify](https://netlify.com) out and about, which is a very simple and effective static web host that uses git pushes to automatically update your site. If your application is basically a bunch of JavaScript that gets and sends data from somewhere else, why not just serve the thing the good old-fashioned way, with a single HTTP call? (Yes, there are caveats, namely SEO, let's save that for later)
 
 ### Cost: $0.00 for one user
+
+Side note: if you shun build chains or are just doing quick-and-dirty prototyping, you can load all your libraries from places like [cdnjs](https://cdnjs.com/) and [unpkg](https://unpkg.com/).
 
 ## Which Database, and Who Serves It?
 
@@ -59,11 +61,13 @@ Not only that, but I was starting to realize my queries were going to need to ge
 
 I then discovered MongoDB's [Stitch](https://www.mongodb.com/cloud/stitch) offering, which they describe as a "Backend as a Service." You may scoff, but that's a pretty good description.
 
-Stitch supplies the direct-browser connection I was hoping for, along with a user management and auth scheme (because nobody should have to write that shit from scratch *shudder*).
+Stitch supplies the direct-browser connection I was hoping for, along with a user management and auth scheme (because nobody should have to write that shit from scratch _shudder_).
 
 I dove in right away and was really happy and excited, and then—fuck me, Stitch doesn't offer full-text search either. Mongo does, but Stitch doesn't have it in their API. WTF!?
 
 [They say they'll eventually add it](https://groups.google.com/forum/#!topic/mongodb-stitch-users/ovkXk86Zw5Y), but I had to rub my temples, roll up my sleeves and take a whack at another core aspect of the serverless approach: lambdas.
+
+### Cost: $0 for up to 488.28125 GB-seconds/month of transmitted data!?
 
 ## Lambda Lambda Lambda
 
@@ -87,7 +91,7 @@ This is all free up to a point, obviously; each service has a tier at which you 
 
 # It Can't Be That Great, Can It?
 
-Search Engine Optimization is the one major (potential) caveat with serverless applications. Search engines rely on a bunch of html text floating around on the web that it can crawl. If your application gets 100% of its content *after* the application has loaded, how can a crawler get its claws on your juicy information?
+Search Engine Optimization is the one major (potential) caveat with serverless applications. Search engines rely on a bunch of html text floating around on the web that it can crawl. If your application gets 100% of its content _after_ the application has loaded, how can a crawler get its claws on your juicy information?
 
 The answer, broadly speaking, is [prerendering](https://www.netlify.com/blog/2016/11/22/prerendering-explained/), but this is where my expertise starts to fade. I will probably need to do something like this eventually with Swymm, if I want particular timeline searches to be indexed on Google.
 
