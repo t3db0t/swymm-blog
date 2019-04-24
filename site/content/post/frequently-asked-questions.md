@@ -39,6 +39,10 @@ There are some obvious similarities but lots of differences:
 
 Wikimedia does have a very interesting project called Wikidata, which is also a 'fact database' that intends to form the foundation of Wikipedia articles in the future. When I discovered this I did a very deep dive into it and discovered, as it's still a young project, that it doesn't yet have very much useful historic event data. As such, Swymm's database will stand on its own, but I'd like to work with Wikimedia in the future to mirror Swymm's data into Wikidata.
 
+# What about (blank)?
+
+There have been a few similar projects, but none with Swymm's scope and feature set. Probably the closest (living) project is [Histropedia](http://histropedia.com), which reads directly from Wikipedia and renders a timeline. However, it doesn't really consist of a database of events so much as a collection of pre-arranged timelines, which is directly antithetical to Swymm's core concept.
+
 # How are you managing spam and crowdsource abuse?
 
 In addition to the "Quality Index" described above, Swymm has a reputation system not unlike Stack Overflow's. Swymm awards points to users for things like adding references to events, verifying other people's references, and more. Your reputation determines what privileges you have on the site, such as being able to report abuse, submitting more new events, and becoming a moderator.
@@ -48,3 +52,7 @@ In addition to the "Quality Index" described above, Swymm has a reputation syste
 Swymm is funded both by public grants and premium features.
 
 Swymm's premium, paid features offer multi-user collaboration, team workspaces, custom subdomains, and enterprise customizability.
+
+# How can I help?
+
+If you're interested in following Swymm's progress or want to pitch in, [sign up here](https://t3db0t.us7.list-manage.com/subscribe?u=315458944463cbb3e340468b5&id=9474ea7949) and let us know how you can help!
